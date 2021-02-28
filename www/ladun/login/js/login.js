@@ -1,11 +1,11 @@
-// ROUTE 
-var routeToLogin = 'https://api.haxors.or.id/rini/login_proses.php';
+// Route 
+var routeToLogin = 'http://api.haxors.or.id/rizka/login_proses.php';
 
-// VUE OBJECT 
+// Vue Object  
 var divUtama = new Vue({
   el :'#divUtama',
   data : {
-    pengembang : 'Rini Fadillah'
+    pengembang : 'Rizka Junaninah'
   },
   methods : {
     masukAtc : function()
@@ -19,7 +19,7 @@ var divUtama = new Vue({
   }
 });
 
-//INISIALISASI
+// Inisialisasi 
 let statusKoneksi = navigator.onLine;
 document.querySelector('#txtUsername').focus();
 
@@ -31,7 +31,6 @@ if(statusKoneksi === true){
   $('#capCekServer').addClass('badge-warning');
 }
 
-//FUNCTION 
 function prosesLogin()
 {
   let username = document.querySelector('#txtUsername').value;

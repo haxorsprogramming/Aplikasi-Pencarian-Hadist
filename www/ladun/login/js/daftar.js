@@ -1,5 +1,5 @@
 // ROUTE 
-var rDaftar = 'https://api.haxors.or.id/rini/create_user.php';
+var rDaftar = 'http://api.haxors.or.id/rizka/create_user.php';
 
 // VUE OBJECT 
 var divUtama = new Vue({
