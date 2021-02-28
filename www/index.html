@@ -1,51 +1,80 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1", shrink-to-fit="no">
+  <title>Aplikasi Pencarian Hadist</title>
+  <!-- base:css -->
+  <link rel="stylesheet" href="ladun/login/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="ladun/login/vendors/base/vendor.bundle.base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <!-- inject:css -->
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+  <link rel="stylesheet" href="ladun/login/css/style.css">
+  <!-- endinject -->
+</head>
+<body>
+  <div class="container-scroller" id='divUtama'>
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="main-panel">
+        <div class="content-wrapper d-flex align-items-center auth px-0">
+          <div class="row w-100 mx-0">
+            <div class="col-lg-4 mx-auto">
+              <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                <div class="brand-logo" style='text-align:center;'>
+                  <img src="ladun/login/images/logo_uin.png" alt="logo" style='width:100px;'>
+                </div>
+                <div style='text-align:center;'>
+                <h3><strong>Aplikasi Klasifikasi Penyakit Kulit</strong></h3>
+                <h4>Program Studi Ilmu Komputer</h4>
+                <h5>Universitas Islam Negeri Sumatera Utara</h5>
+                <div style="margin-top:20px;">
+                  <div id='frm_login'>
+                      <div class="form-group">
+                          <input type="text" class="form-control form-control-lg" id="txtUsername" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control form-control-lg" id="txtPassword" placeholder="Password">
+                        </div>
+                        <div id='capNotifLogin'></div>
+                        <div class="mt-3">
+                          <a id='btnMasuk' v-on:click='masukAtc' class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="#!">
+                            <i class='fas fa-sign-in-alt'></i> Masuk
+                          </a>
+                          <div style="margin-top: 20px;">
+                            <a href='#!' v-on:click='daftarAtc'><h5>Registrasi User</h5></a>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="mt-2">
+                      <div style='padding-top:22px;'>
+                        <h6 class="font-weight-light">Develop by : {{pengembang}}</h5>
+                          <div class="badges">
+                            <small>Status koneksi </small><a href="#!" id='capCekServer' class="badge">-</a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+      </div>
+      <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="ladun/login/vendors/base/vendor.bundle.base.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<!-- inject:js -->
+<script src="ladun/login/js/template.js"></script>
+<script src="ladun/login/js/login.js"></script>
+<!-- endinject -->
+</body>
+
 </html>
