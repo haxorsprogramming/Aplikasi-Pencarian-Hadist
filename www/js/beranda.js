@@ -4,14 +4,10 @@ var divApps = new Vue({
     developer: "Rizka Junainah",
   },
   methods: {
-    pengujianAtc: function () {
-      $("#divUtama").load("pengujian.html");
+    cariHadis: function () {
+      $("#divUtama").load("cari-hadis.html");
       $(".button-collapse").sideNav("hide");
-    },
-    daftarPenyakitAtc: function () {
-      $("#divUtama").load("daftarPenyakit.html");
-      $(".button-collapse").sideNav("hide");
-    },
+    }
   },
 });
 
