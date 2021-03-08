@@ -4,8 +4,24 @@ var divApps = new Vue({
     developer: "Rizka Junainah",
   },
   methods: {
-    cariHadis: function () {
+    cariHadis: function()
+    {
       $("#divUtama").load("cari-hadis.html");
+      $(".button-collapse").sideNav("hide");
+    },
+    daftarKitab : function()
+    {
+      $("#divUtama").load("daftar-kitab.html");
+      $(".button-collapse").sideNav("hide"); 
+    },
+    cariHadisKata : function()
+    {
+      $("#divUtama").load("cari-hadis-kata.html");
+      $(".button-collapse").sideNav("hide"); 
+    },
+    beranda : function()
+    {
+      $("#divUtama").load("beranda.html");
       $(".button-collapse").sideNav("hide");
     }
   },
@@ -18,7 +34,7 @@ $(".button-collapse").sideNav();
 $("select").material_select();
 var loading = "<div class='progress'><div class='indeterminate'></div></div>";
 $("#divUtama").html(loading);
-$("#divUtama").load("utama.html");
+$("#divUtama").load("beranda.html");
 $("#judulApps").html("Aplikasi Pencarian Hadist Shahih, Hasan, Dha'if, dan Maudhu'");
 
 function updateSistem() {

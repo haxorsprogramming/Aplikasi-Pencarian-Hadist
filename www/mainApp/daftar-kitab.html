@@ -1,0 +1,37 @@
+<div class="row" style="margin-top: 20px" id="divDaftarKitab">
+
+    <table class="highlight">
+        <thead>
+            <tr>
+                <th>Kode</th><th>Nama Kitab</th><th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="dk in dataKitab">
+                <td>{{ dk.kd_kitab }}</td><td>{{ dk.nama_kitab }}</td><td></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<script>
+    var urlGetKitab = "http://localhost/API_Hadis_BM25/get_kitab_data.php";
+    axios.get(urlGetKitab).then(function (res) {
+        let dr = res.data;
+        dr.forEach(renderKitab);
+        function renderKitab(item, index){
+            let kodeKitab = dr[index].kd_kitab;
+            let namaKitab = dr[index].nama_kitab;
+            divKitab.dataKitab.push({kd_kitab : kodeKitab, nama_kitab : namaKitab});
+        }
+    });
+
+    var divKitab = new Vue({
+        el : '#divDaftarKitab',
+        data : {
+            dataKitab : []
+        }
+    });
+
+</script>
